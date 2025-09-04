@@ -32,6 +32,7 @@ This project demonstrates how to:
 
 ### Installing Go on Ubuntu
 
+
 ```bash
 # Update package list
 sudo apt update
@@ -42,3 +43,124 @@ sudo snap install go --classic
 # Verify installation
 go version
 # Expected output: go version go1.24.2 linux/amd64
+```
+ ## Setting Up Your Workspace
+
+```bash
+# Create project directory
+mkdir ~/go-projects
+cd ~/go-projects
+
+# Create hello-world project
+mkdir hello-world
+cd hello-world
+
+# Initialize Go module
+go mod init hello-world
+```
+
+## 🚀 Running the Application
+
+```bash
+# Create the main.go file
+
+nano main.go
+## Paste the following code:
+
+package main
+
+import (
+    "fmt"
+    "net/http"
+)
+
+func main() {
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hello World from Go!")
+    })
+
+    fmt.Println("Server starting on port 8080...")
+    err := http.ListenAndServe(":8080", nil)
+    if err != nil {
+        fmt.Printf("Server failed to start: %v\n", err)
+    }
+}
+```
+## Run the Server
+
+```bash
+go run main.go
+
+## Expected output:
+Server starting on port 8080...
+```
+
+## Test the Server
+
+ ## Using curl:
+
+ ```bash
+curl http://localhost:8080
+
+## Using web browser:
+
+Navigate to http://localhost:8080
+
+## Expected response:
+
+Hello World from Go!
+```
+
+### 📝 AI Prompt Journal
+
+Prompt 1:
+"Give me a step-by-step guide to install Go on Ubuntu and create a simple Hello World web server"
+
+AI Response Summary: Provided clear installation instructions and complete HTTP server example with explanations of each component.
+
+Helpfulness: 10/10 - Comprehensive and immediately usable.
+
+Prompt 2:
+"What are common errors when starting with Go and how to fix them?"
+
+AI Response Summary: Listed common issues including GOPATH problems, import errors, port conflicts, and permission issues with specific solutions.
+
+Helpfulness: 9/10 - Anticipated problems beginners might encounter.
+
+Prompt 3:
+"How do I structure a basic Go project and what should be in the go.mod file?"
+
+AI Response Summary: Explained modern Go project structure with modules and provided examples of proper project organization.
+
+Helpfulness: 9/10 - Clarified the modern approach vs. older GOPATH method.
+
+## 🐛 Common Errors & Solutions
+
+"command not found: go"
+
+Solution: Go isn't installed or not in PATH. Reinstall using instructions above.
+
+"cannot find module providing package"
+
+Solution: Run go mod tidy to sync dependencies.
+
+"port already in use"
+
+Solution: Change port number in code or stop the other process using port 8080.
+
+"permission denied" when binding to ports below 1024
+
+Solution: Use port above 1024 or run with sudo (not recommended).
+
+"expected 'package', found 'go'"
+
+Solution: File doesn't start with package main. Recreate file correctly.
+
+Cut buffer is empty in nano
+
+Solution: Use system paste (Ctrl+Shift+V) instead of Nano's internal paste.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
