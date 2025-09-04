@@ -85,6 +85,7 @@ func main() {
         fmt.Printf("Server failed to start: %v\n", err)
     }
 }
+
 ```
 ## Run the Server
 
@@ -111,28 +112,29 @@ Navigate to http://localhost:8080
 Hello World from Go!
 ```
 
-### 📝 AI Prompt Journal
+## 🤖 AI Prompt Journal
 
-Prompt 1:
+### Prompt 1:
 "Give me a step-by-step guide to install Go on Ubuntu and create a simple Hello World web server"
 
-AI Response Summary: Provided clear installation instructions and complete HTTP server example with explanations of each component.
+**AI Response Summary:** [Briefly describe what the AI provided]
 
-Helpfulness: 10/10 - Comprehensive and immediately usable.
+**Helpfulness:** 10/10 - Comprehensive and immediately usable.
 
-Prompt 2:
+### Prompt 2:
 "What are common errors when starting with Go and how to fix them?"
 
-AI Response Summary: Listed common issues including GOPATH problems, import errors, port conflicts, and permission issues with specific solutions.
+**AI Response Summary:** [Briefly describe the AI's response]
 
-Helpfulness: 9/10 - Anticipated problems beginners might encounter.
+**Helpfulness:** 9/10 - Anticipated problems beginners might encounter.
 
-Prompt 3:
+### Prompt 3:
 "How do I structure a basic Go project and what should be in the go.mod file?"
 
-AI Response Summary: Explained modern Go project structure with modules and provided examples of proper project organization.
+**AI Response Summary:** [Briefly describe the AI's response]
 
-Helpfulness: 9/10 - Clarified the modern approach vs. older GOPATH method.
+**Helpfulness:** 9/10 - Clarified modern project structure.
+
 
 ## 🐛 Common Errors & Solutions
 
@@ -159,6 +161,25 @@ Solution: File doesn't start with package main. Recreate file correctly.
 Cut buffer is empty in nano
 
 Solution: Use system paste (Ctrl+Shift+V) instead of Nano's internal paste.
+
+
+## 📚 Learning Reflections
+
+[Add 2-3 paragraphs about your experience learning Go - what was easy/hard, surprises, etc.]
+
+## 🔗 Reference Resources
+
+- **Official Go Documentation:** https://golang.org/doc/
+- **Go Tour:** https://tour.golang.org/
+- **Go by Example:** https://gobyexample.com/
+- **Awesome Go:** https://awesome-go.com/
+
+## 📞 Support
+
+If you encounter issues:
+1. Check the "Common Errors & Solutions" section
+2. Consult the official Go documentation
+3. Search Stack Overflow with [go] tag
 
 ## 📄 License
 
